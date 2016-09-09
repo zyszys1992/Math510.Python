@@ -1,0 +1,19 @@
+punctuations='''!()-[]{};:'"\,<>./?@#$%^&*_~ '''
+no_punct=""
+
+something = input("Enter text: ")
+for char in something:
+   if char not in punctuations:
+       no_punct = no_punct + char
+
+def reverse(no_punct):
+    return no_punct[::-1]
+
+def is_palindrome(no_punct):
+    return no_punct == reverse(no_punct)
+
+if is_palindrome(no_punct):
+    print("Yes, it is a palindrome")
+    print(something)
+else:
+    print("No, it is not a palindrome")
